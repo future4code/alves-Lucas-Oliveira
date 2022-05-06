@@ -1,0 +1,10 @@
+1 Strogonoff
+2 Feijoada
+3 Pizza
+4 Hamburger
+5 Guacamole
+6 Sushi
+7 Churrasco
+8 Bife a cavalo
+9 Isca de peixe frito
+10 Bulgogi

@@ -39,25 +39,27 @@ function verificaSeEMaior(a, b) {
 // CONDICIONAIS
 
 // Exercício 3------------------------------------------------------------------------------------
-// const nomeDoUsuario = prompt("Digite aqui o seu nome!")
-// const anoDeNascimento = Number(prompt("Digite aqui o ano de seu nascimento!"))
-// const senhaDoUsuario = prompt("Digite aqui uma senha com no mínimo 6 caracteres!")
-// const nacionalidade = prompt("Digite aqui qual a sua nacionalidade!").toLowerCase()
+ const nomeDoUsuario = prompt("Digite aqui o seu nome!")
+ const anoDeNascimento = Number(prompt("Digite aqui o ano de seu nascimento!"))
+ const senhaDoUsuario = prompt("Digite aqui uma senha com no mínimo 6 caracteres!")
+ const nacionalidade = prompt("Digite aqui qual a sua nacionalidade!").toLowerCase()
 
 const cadastro = (nome, anoNascimento, senha, nacionalidade) => {//Aqui está o nome da função e os (parametros) pedidos
     const usuario = [] // Aqui está o array que vai conter os parâmetros a serem comparados na função.
-    let maiorIdade = 2022 - anoDeNascimento // Aqui está verificando se o usuario é maior de idade comparando ano atual - o ano de nascimento inserido por ele.
+    let maiorIdade = 2022 - anoNascimento // Aqui está verificando se o usuario é maior de idade comparando ano atual - o ano de nascimento inserido por ele.
+    usuario.push(nome,anoNascimento,senha,nacionalidade) // Aqui estamos colocando os parâmetros exigidos dentro do array usuario
     if (maiorIdade >= 18 && (senha.length >= 6) && nacionalidade === "brasileiro" ){
     // O if faz a comparação dos paramentros com o que a questão está pedindo e vendo se as tres informações correspondem ao que o sistema pede.
-        usuario.push(nome,anoNascimento,senha,nacionalidade) // Aqui estamos colocando os parâmetros exigidos dentro do array usuario
-    } 
-    return usuario // esse é o retorno de todos os comparativos feitos pela função
+        return `usuario cadastrado` // esse é o retorno de todos os comparativos feitos pela função
+    } else {
+        return `O usuario não pode ser cadastrado`
+    }
 }
-// console.log(cadastro(nomeDoUsuario, anoDeNascimento, senhaDoUsuario,nacionalidade));
+console.log(cadastro(nomeDoUsuario, anoDeNascimento, senhaDoUsuario,nacionalidade));
 
 // // Exercício 4-----------------------------------------------------------------------------------------------
 
-//const senhaUsuario = prompt("Digite aqui a senha que você cadastrou!").toLowerCase() // Estamos solicitando a senha criada pelo usuário.
+const senhaUsuario = prompt("Digite aqui a senha que você cadastrou!").toLowerCase() // Estamos solicitando a senha criada pelo usuário.
 
 const login = (confirmaSenha) => { // nome da função mais os parâmetros a serem comparados.
     const login = "labenu" // está é a senha já cadastrada pelo usuario antigamente que se encontra no banco de dados
@@ -67,12 +69,12 @@ const login = (confirmaSenha) => { // nome da função mais os parâmetros a ser
         return 'Senha Inválida'// mensagem que aparecerá para o usuário caso os comparativos deêm negativo.
     }
 }
-//console.log(login(senhaUsuario));
+console.log(login(senhaUsuario));
 
 // // Exercício 5----------------------------------------------------------------------------------------------------
 
-//const usuarioName = prompt("Digite aqui seu nome!")//Solicitação ao usuário para informar o nome.
-//const vacinaTomada = prompt("Digite aqui qual vacina você tomou na primeira dose!").toLowerCase()// solicitação ao usuário de qual vacina ele tomou na primeira dose.
+const usuarioName = prompt("Digite aqui seu nome!")//Solicitação ao usuário para informar o nome.
+const vacinaTomada = prompt("Digite aqui qual vacina você tomou na primeira dose!").toLowerCase()// solicitação ao usuário de qual vacina ele tomou na primeira dose.
 
 const primeiraDose = (nomeUser, vacinaUser) => { // Nome da função e os parametrôs que serviram de base para a função!
     let tempo = []//fiz um array pra armazenar as informações de quanto tempo falta para o usuário tomar a segunda dose, que serão recebidas de acordo com a vacina tomada. 
@@ -91,7 +93,7 @@ const primeiraDose = (nomeUser, vacinaUser) => { // Nome da função e os parame
             return `Olá ${nomeUser}! A próxima dose da ${vacinaUser} é daqui a ${tempo} dias. Compareça no posto na data ${data}.`//mensagem com as informações pedidas do usuário que tomou "pfizer"
     }
  }
- //console.log(primeiraDose(usuarioName,vacinaTomada))
+console.log(primeiraDose(usuarioName,vacinaTomada))
 
 
 // // LOOP+CONDICIONAL
@@ -138,41 +140,59 @@ avisoAosAtrasados();// chamada da função
 
 // // DESAFIO------------------------------------------------------------------------------------------
 
-// const usuarios = [
-//     {
-//         nome: "Artur",
-//         ano: 2000,
-//         nacionalidae: "brasileiro",
-//         senha: "123456",
-//         vacina: "pfizer",
-//         imunizacao: "incompleta"
-//     },
-//     {
-//         nome: "Bárbara",
-//         ano: 1984,
-//         nacionalidae: "brasileira",
-//         senha: "labenu",
-//         vacina: "astrazenica",
-//         imunizacao: "completa"
-//     },
-//     {
-//         nome: "Carlos",
-//         ano: 2000,
-//         nacionalidae: "brasileiro",
-//         senha: "123456",
-//         vacina: "coronavac",
-//         imunizacao: "incompleta"
-//     }
+const usuarios = [
+    {
+        nome: "Artur",
+        ano: 2000,
+        nacionalidae: "brasileiro",
+        senha: "123456",
+        vacina: "pfizer",
+        imunizacao: "incompleta"
+    },
+    {
+        nome: "Bárbara",
+        ano: 1984,
+        nacionalidae: "brasileira",
+        senha: "labenu",
+        vacina: "astrazenica",
+        imunizacao: "completa"
+    },
+    {
+        nome: "Carlos",
+        ano: 2000,
+        nacionalidae: "brasileiro",
+        senha: "123456",
+        vacina: "coronavac",
+        imunizacao: "incompleta"
+    }
+]
 
+// const nomeDoUsuario1 = prompt("Digite aqui o seu nome!")
+// const anoDeNascimento1 = Number(prompt("Digite aqui o ano de seu nascimento!"))
+// const senhaDoUsuario1 = prompt("Digite aqui uma senha com no mínimo 6 caracteres!")
+// const nacionalidade1 = prompt("Digite aqui qual a sua nacionalidade!").toLowerCase()
+const respostasUsuario = {nomeDoUsuario, anoDeNascimento, senhaDoUsuario, nacionalidade}
 
-/*No desafio, ao invés de cadastrar o usuário enviando para o array, você vai adicionar as informações recebidas pelo prompt a um objeto
- e então adicioná-lo ao array usuarios.*/
+const cadastro2 = (respostaUsuario) => {//Aqui está o nome da função e os (parametros) pedidos
+    const usuario = [] // Aqui está o array que vai conter os parâmetros a serem comparados na função.
+        if (respostaUsuario >= 18 && respostaUsuario.senha.length >= 6 && respostaUsuario.nacionalidadeusuario === "brasileiro" ){
+    // O if faz a comparação dos paramentros com o que a questão está pedindo e vendo se as tres informações correspondem ao que o sistema pede.
+            usuario.push(respostaUsuario)
+        return "usuario cadastrado"
+    } else {
+        return "Usuario não cadastrado"
+    }
+}
+console.log(cadastro2(respostasUsuario));
 
-// const cadastroDesafio = () => {
+/*No desafio, o exercício 4 deve ser refatorado para ler a lista de usuarios e comparar o valor que vem do prompt com a propriedade senha. 
+Caso encontre uma senha compatível deve devolver as mesmas mensagens.*/
+
+// const cadastroDesafio = (usuarios) => {
 //     //  Sua lógica aqui
 // }
-// console.log(cadastroDesafio());
-
+//  console.log(cadastroDesafio());
+ 
 // const loginDesafio = () => {
 //     //  Sua lógica aqui
 // }

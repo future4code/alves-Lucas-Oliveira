@@ -15,7 +15,7 @@ console.log(checarDesigualdade(1, 3)); // Os parametros devem ser colocados na m
 
 function checarIgualdade(a, b) {
     
-    return `No comparador de igualdade ${a} === ${b} é ${a === b}`
+    return `No comparador de igualdade ${a} === ${b} é ${a === b}`// Comparação dos parametros (a) e (b) se são completamente iguais.
 }
 console.log(checarIgualdade(2, 2))
 
@@ -98,39 +98,42 @@ const primeiraDose = (nomeUser, vacinaUser) => { // Nome da função e os parame
 
 // // Exercício 6 -------------------------------------------------------------------------------------
 
-/*Escreva uma função para validar a segunda dose de um usuário, 
-que receba o nomeDoUsuário e mude o valor da propriedade imunização para “completa” para isso vamos te fornecer uma lista de usuários.*/
+/*Escreva uma função para validar a segunda dose de um usuário, que receba o nomeDoUsuário e mude o valor 
+da propriedade imunização para “completa” para isso vamos te fornecer uma lista de usuários.*/
 
-const segundaDose = (nomeDoUsuario) => {
-    console.log(nomeDoUsuario)
-    const usuarios = [
+const segundaDose = (nomeDoUsuario) => {// Nome da função e parametrô que será usado (nesse caso "Barbara")
+    //console.log(nomeDoUsuario)
+    const usuarios = [// Array com a lista fornecida
         { nome: "Artur", imunizacao: "incompleta" },
         { nome: "Barbara", imunizacao: "incompleta" },
         { nome: "Carlos", imunizacao: "incompleta" }
     ]
-    for(let pessoa of usuarios){
-     console.log(pessoa)
-        if (nomeDoUsuario === pessoa.nome) {
-            pessoa.imunizacao = "completa"
-            return pessoa
+    for(let pessoa of usuarios){//variavel criada para varrer a lista do usuários
+    //console.log(pessoa)
+        if (nomeDoUsuario === pessoa.nome) {// Aqui usa-se o paramentro de comparação (nomeDoUsuario) com a lista de varredura sendo acessada através do nome
+            pessoa.imunizacao = "completa"// após ter encontrado dentro da lista fornecida aqui é feita a troca de ("incompleta") para ("completa")
+            return pessoa // aqui retorna o parametro encontrado já com a alteração.
         }
     }
 }
-console.log(segundaDose("Barbara"));
+console.log(segundaDose("Barbara"));// chamada da função com o parâmetro a ser buscado.
 
 // // Exercício 7 --------------------------------------------------------------------------------------
 
-// const avisoAosAtrasados = () => {
-//     const usuarios = [
-//         { nome: "Artur", imunizacao: "incompleta" },
-//         { nome: "Barbara", imunizacao: "completa" },
-//         { nome: "Carlos", imunizacao: "incompleta" }
-//     ]
-
-//     //  Sua lógica aqui
-
-// }
-// console.log(avisoAosAtrasados());
+const avisoAosAtrasados = () => {//Como a lista que vou comparar está em um array dentro da função não precisarei de parametro externo.
+    const usuarios = [ // array fornecido pelo sistema a ser comparado
+        { nome: "Artur", imunizacao: "incompleta" },
+        { nome: "Barbara", imunizacao: "completa" },
+        { nome: "Carlos", imunizacao: "incompleta" }
+    ]
+    for(let user of usuarios){ // usando o for para buscar fazer a varredura no array usuarios
+        if (user.imunizacao === "incompleta"){// verificando dentro do array quem está com a imunização "incompleta"
+     console.log( `Olá ${user.nome}! Sua imunização está ${user.imunizacao}, por favor volte ao postinho para tomar a segunda dose.`)   
+    // no console log após ter encontrado o parametro "incompleta" eu utilizo os dados do (NOME) para enviar a mensagem
+    }
+    }
+}
+avisoAosAtrasados();// chamada da função
 
 
 // // DESAFIO------------------------------------------------------------------------------------------
@@ -161,7 +164,9 @@ console.log(segundaDose("Barbara"));
 //         imunizacao: "incompleta"
 //     }
 
-// ]
+
+/*No desafio, ao invés de cadastrar o usuário enviando para o array, você vai adicionar as informações recebidas pelo prompt a um objeto
+ e então adicioná-lo ao array usuarios.*/
 
 // const cadastroDesafio = () => {
 //     //  Sua lógica aqui

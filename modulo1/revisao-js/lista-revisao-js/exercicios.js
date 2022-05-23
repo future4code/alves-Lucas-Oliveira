@@ -20,8 +20,12 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-
+    const numerosPares = array.filter((numero) => {
+        return numero % 2 === 0 
+    })
+        return numerosPares
 }
+
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
  

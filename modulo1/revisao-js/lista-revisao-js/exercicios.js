@@ -36,11 +36,13 @@ function retornaNumerosParesElevadosADois(array) {
     })
         return numerosElevados
 }
+retornaNumerosParesElevadosADois(numerosElevados)
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+    return array.sort((a, b) => a - b);
 }
+console.log(retornaMaiorNumero(array));
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {

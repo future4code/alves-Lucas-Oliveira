@@ -1,0 +1,22 @@
+.cabecalho{
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.cabecalho2{
+    text-align: center;
+    color:white;
+    background-color: black;
+    padding: 20px;
+}
+
+.foto-principal{
+    text-align: center;
+    padding: 30px;
+}
+
+.rodape{
+    text-align: center;
+    color: white;    
+}

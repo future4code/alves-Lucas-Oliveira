@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.titulo-pagina{
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.corpo{
+    background-color: black;
+    color: white;
+}
+
+.imagem-de-carregamento{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}

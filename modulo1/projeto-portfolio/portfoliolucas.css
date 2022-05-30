@@ -1,22 +1,72 @@
-*{
+@import url('https://fonts.googleapis.com/css2? family= Amatic+SC:wght@700 & display=swap');
+
+
+body{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+    color: black;
 }
 
-.titulo-pagina{
-    text-align: center;
-    color: white;
-    background-color: black;
+/* header */
+
+.parte-cima-container{
+    height: 130vw;
+    width: 130vw;
+    background-color: rgb(85, 76, 25);
+    background-image:espera;
+    background-image: no-repeat;
+    background-image: center;
+    background-image: contain;
+    background-size: contain;
+    position: relative;
 }
 
-.corpo{
-    background-color: black;
-    color: white;
-}
-
-.imagem-de-carregamento{
-    text-align: center;
+h1{
+    font-size: 50px;
+    text-transform: uppercase;
 }
 h2{
-    text-align: center;
+    text-transform: uppercase;
+    
 }
+
+.redes-sociais{
+    margin-top: 1rem;
+    display: flex;
+}
+
+.redes-sociais a{
+text-decoration: none;
+color: black;
+padding: 1rem 4rem;
+border: 1px solid black;
+min-width: 4rem;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: .5s ease-in-out;
+}
+
+a :hover{
+    background-color: white;
+}
+
+.checkbox-container{
+    height: 100px;
+    width: 100px;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox-container .traco{
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+}
+
+.chechbox .traco

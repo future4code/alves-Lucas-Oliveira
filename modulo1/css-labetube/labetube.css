@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body > div{
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr 50px 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-items: start;
+    padding: 1rem;
+    background-color: rgb(255, 111, 0);
+}
+
+header input{
+    grid-column: 3/4;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-items: start;
+    padding: 1rem;
+    background-color: rgb(255, 111, 0);
+}
+
+main{
+    display: grid;
+    border: solid 1px red;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    grid-template-rows: 150px 150px 150px;
+}
+
+footer input{
+    grid-column: 3/4;
+}
+
+.card{
+    width: 150px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.card video{
+    width: 100%;
+}
+
+.card p{
+    margin-top: 10px;
+}

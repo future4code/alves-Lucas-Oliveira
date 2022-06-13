@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+}
+
+header{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: start;
+    border: solid 1px black;
+    padding: 1rem;
+}
+
+header input{
+    grid-column 3/4;
+}
